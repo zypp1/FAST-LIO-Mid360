@@ -9,7 +9,7 @@
 
 （3）Fast LIO2 : https://github.com/hku-mars/FAST_LIO.git
 
-> 说明：本仓库提供的Fast LIO2代码为修改过后的Fast LIO代码，其相比源码将FastLIO的里程计信息（话题：/Odometry）转发给mavros（话题：/mavros/vision_pose/odom）用于融合。
+> 说明：本仓库提供的Fast LIO2代码为修改过后的Fast LIO代码，其相比源码将FastLIO的里程计信息（话题：/Odometry）转发给mavros（话题：/mavros/vision_pose/pose）用于融合。
 
 可参考链接：
 
