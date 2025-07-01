@@ -64,7 +64,7 @@ cd livox_ros_driver2
 （1）固定PC端有线网IP
 
     设定有线IPv4方式：手动；
-
+    
     地址：192.168.1.50；
     
     子网掩码：255.255.255.0；
@@ -133,14 +133,25 @@ roslaunch livox_ros_driver2 rviz_MID360.launch
 
 ## 5、Fast LIO 安装
 
-### 克隆源码
+### 克隆本仓库源码
 ```bash 
+git clone https://github.com/zypp1/FAST-LIO-Mid360.git ~/fast_lio_ws
+```
+
+### 如果直接clone官方仓库
+
+#### 克隆源码
+
+```bash
 mkdir -p  ~/fast_lio_ws/src
 cd ~/fast_lio_ws/src
 git clone https://github.com/hku-mars/FAST_LIO.git
 ```
 
-### 克隆ikd-tree
+
+
+#### 克隆ikd-tree
+
 克隆下来的代码缺少ikd-tree源码需要手动添加
 ```bash
 git clone https://github.com/hku-mars/ikd-Tree.git
@@ -148,7 +159,7 @@ git clone https://github.com/hku-mars/ikd-Tree.git
 克隆ikd-tree源码复制到 ~/fast_lio_ws/src/FAST_LIO/ikd-Tree下
 
 
-### 修改源码
+#### 修改源码
 因为mid360用的是livox_ros_driver2，为了使其与mid360适配，必须修改代码。
 
 用vscode打开fast_lio_ws工作空间，搜索：livox_ros_driver
@@ -157,6 +168,7 @@ git clone https://github.com/hku-mars/ikd-Tree.git
 
 ### 编译
 ```bash 
+source ~/livox_ws/devel/setup.bash
 cd ~/fast_lio_ws/src
 catkin_make
 ```
