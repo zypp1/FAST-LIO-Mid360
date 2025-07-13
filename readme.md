@@ -133,7 +133,7 @@ roslaunch livox_ros_driver2 rviz_MID360.launch
 
 > 说明: rviz_MID360.launch 启动代码 发布的点云话题消息类型为 PointCloud2 标准消息 能够在 rviz 中可视化；msg_MID360.launch 启动代码 发布的点云话题消息类型为 Livox 自定义消息 不能够在 rviz 中可视化。
 
-## 5、Fast LIO 安装
+## 5、Fast LIO 安装（必须）
 
 ### 克隆本仓库源码
 
@@ -195,7 +195,7 @@ source devel/setup.bash
 roslaunch fast_lio mapping_mid360.launch
 ```
 
-## FAST LIO 里程计信息传入 mavros
+## 6、FAST LIO 里程计信息传入 mavros（无人机平台必须）
 
 ### 修改 FAST LIO 代码
 
@@ -211,7 +211,7 @@ roslaunch fast_lio mapping_mid360.launch
 
 (2) 无人机的高度来源也需要修改，修改参数"EKF2_HGT_MODE"为"vision"
 
-## 雷达倾斜安装操作
+## 7、雷达倾斜安装操作（可选，详见附件“fastlio及livox坐标问题.md”）
 
 ### 方案一：在 Livox-SDK2 中增加旋转平移矩阵
 
